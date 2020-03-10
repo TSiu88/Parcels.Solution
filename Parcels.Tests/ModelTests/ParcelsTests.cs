@@ -7,11 +7,24 @@ namespace Parcels.Tests
   public class ParcelTests
   {
     [TestMethod]
-    public void MethodName1_DescriptionOfBehavior1_ExpectedResult1()
+    public void ParcelConstructor_ParcelObjectCreatedCorrectly_ParcelObject()
     {
-      Parcel classObj = new Parcel("hi", 12, "hello");
-      Assert.AreEqual("hi", classObj.Property1);
+      Parcel parcel = new Parcel(3, 4, 2, 5);
+      Assert.AreEqual(typeof(Parcel), parcel.GetType());
     }
 
+    [TestMethod]
+    public void ParcelConstructor_InitializeParcelProperties_Ints()
+    {
+      int expectedWeight = 1;
+      int expectedLength = 2;
+      int expectedWidth = 3;
+      int expectedHeight = 4;
+      Parcel parcel = new Parcel(expectedWeight, expectedLength, expectedWidth, expectedHeight);
+      Assert.AreEqual(expectedWeight, parcel.Weight);
+      Assert.AreEqual(expectedLength, parcel.Length);
+      Assert.AreEqual(expectedWidth, parcel.Width);
+      Assert.AreEqual(expectedHeight, parcel.Height);
+    }
   }
 }

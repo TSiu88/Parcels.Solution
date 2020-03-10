@@ -26,6 +26,9 @@ A C#/.NET Core MVC website that helps users calculate shipping estimates. The us
 - User can enter dimensions of parcel in inches.
   - Sample input: User enters 10 for height, 10 for width, and 12 for length.
   - Expected output: No output until form is submitted.
+- Screen will display weight and dimensions of parcel on submit of form.
+  - Sample input: User submits form.
+  - Expected output: Weight: 10lbs, Height: 10in, Width: 10in, Length: 12in
 - User will receive cost of shipping estimate for parcel on submit of form.
   - Sample input: User submits form.
   - Expected output: The estimated cost of shipping is \$24.
