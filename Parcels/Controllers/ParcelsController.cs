@@ -11,7 +11,6 @@ namespace Parcels.Controllers
     [HttpPost("/result")]
     public ActionResult Result(int weight, int length, int width, int height)
     {
-      ViewBag.Title = "Shipping Cost";
       Parcel parcel = new Parcel(weight, length, width, height);
       return View(parcel);
     }

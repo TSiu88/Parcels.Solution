@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Parcels
 
 #### A C#/.NET Core MVC website that helps users calculate shipping estimates, Current Version: 3/10/20
 
