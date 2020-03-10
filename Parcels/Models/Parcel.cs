@@ -1,13 +1,13 @@
 using System;
 
-namespace ProjectName.Models
+namespace Parcels.Models
 {
-  public class ClassName
+  public class Parcel
   {
     public string Name { get; set; }
     public string City { get; set; }
 
-    public ClassName(string name)
+    public Parcel(string name)
     {
       Name = name;
       City = "Seattle";
