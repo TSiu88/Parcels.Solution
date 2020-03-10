@@ -5,16 +5,14 @@ namespace Parcels.Controllers
 {
   public class ParcelsController : Controller
   {
-    // [Route("/form")]
-    // public ActionResult Form() { return View(); }
+    [HttpGet("/form")]
+    public ActionResult Form() { return View(); }
 
-    // [Route("/result")]
-    // public ActionResult Result(string name, string city)
-    // {
-    //   Parcel parcel = new Parcel("DefaultName");
-    //   parcel.Name = name;
-    //   parcel.City = city;
-    //   return View(parcel);
-    // }
+    [HttpPost("/result")]
+    public ActionResult Result(int weight, int length, int width, int height)
+    {
+      Parcel parcel = new Parcel(weight, length, width, height);
+      return View(parcel);
+    }
   }
 }

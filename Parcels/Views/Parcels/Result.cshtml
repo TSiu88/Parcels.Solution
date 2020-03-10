@@ -1,3 +1,16 @@
-<h1>Welcome @Model.Name</h1>
-<p>You are in the city of @Model.City</p>
-<a href="/">Go To Home Page</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Shipping Information</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    @using Parcels.Models
+    <h1>Your Shipping Cost:</h1>
+    <p>For your package of @Model.Length by @Model.Width by @Model.Height inches with weight of @Model.Weight lbs, the cost of shipping your package is:</p>
+    <p>$@Model.CostToShip()</p>
+    <a href="/">Return To Home Page</a>
+  </body>
+</html>
+

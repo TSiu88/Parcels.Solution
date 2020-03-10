@@ -2,17 +2,21 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>Enter Your Information</title>
+    <title>Calculate Shipping for Your Parcel</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>Fill in your name and your city:</h1>
+    <h1>Enter your parcel information:</h1>
     <form action="/result" method="post">
-     <label for="name">Your Name</label>
-     <input id="name" name="name" type="text">
-     <label for="city">Your city</label>
-     <input id="city" name="city" type="text">
-     <button type="submit">Go!</button>
+     <label for="weight">Parcel weight (lbs)</label>
+     <input id="weight" name="weight" type="number" required>
+     <label for="length">Parcel length (inches)</label>
+     <input id="length" name="length" type="number" required>
+     <label for="width">Parcel width (inches)</label>
+     <input id="width" name="width" type="number" required>
+     <label for="height">Parcel height (inches)</label>
+     <input id="height" name="height" type="number" required>
+     <button type="submit">Calculate Shipping Cost!</button>
     </form>
   </body>
 </html>
