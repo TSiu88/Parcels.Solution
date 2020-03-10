@@ -1,0 +1,25 @@
+* {
+  font-size: 1.1em;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.btn {
+  background-color: lightgray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 60vh;
+}

@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Calculate Shipping for Your Parcel</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  </head>
-  <body>
-    <h1>Enter your parcel information:</h1>
-    <form action="/result" method="post">
-     <label for="weight">Parcel weight (lbs)</label>
-     <input id="weight" name="weight" type="number" required>
-     <label for="length">Parcel length (inches)</label>
-     <input id="length" name="length" type="number" required>
-     <label for="width">Parcel width (inches)</label>
-     <input id="width" name="width" type="number" required>
-     <label for="height">Parcel height (inches)</label>
-     <input id="height" name="height" type="number" required>
-     <button type="submit">Calculate Shipping Cost!</button>
-    </form>
-  </body>
-</html>
+@{
+  Layout = "_Layout";
+}
+<div class="container">
+  <h1>Enter your parcel information:</h1>
+  <form action="/result" method="post">
+    <div class="form-group">
+      <label for="weight">Parcel weight (lbs)</label>
+      <input id="weight" name="weight" type="number" required>
+    </div>
+    <div class="form-group">
+      <label for="length">Parcel length (inches)</label>
+      <input id="length" name="length" type="number" required>
+    </div>
+    <div class="form-group">
+      <label for="width">Parcel width (inches)</label>
+      <input id="width" name="width" type="number" required>  
+    </div>
+    <div class="form-group">
+      <label for="height">Parcel height (inches)</label>
+      <input id="height" name="height" type="number" required>
+    </div>
+
+    <button class="btn" type="submit">Calculate Shipping Cost!</button>
+  </form>
+  <a href="/">Return To Home Page</a>
+</div>
