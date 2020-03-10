@@ -26,5 +26,29 @@ namespace Parcels.Tests
       Assert.AreEqual(expectedWidth, parcel.Width);
       Assert.AreEqual(expectedHeight, parcel.Height);
     }
+
+    [TestMethod]
+    public void Volume_CalculateVolume_Int()
+    {
+      Parcel parcel = new Parcel(5, 1, 2, 3);
+      int expectedVolume = 6;
+      Assert.AreEqual(expectedVolume, parcel.Volume());
+    }
+
+    [TestMethod]
+    public void CostToShip_GetCostUnder5Pounds_Int()
+    {
+      Parcel parcel = new Parcel(4, 1, 2, 3);
+      int expectedCost = 6;
+      Assert.AreEqual(expectedCost, parcel.CostToShip());
+    }
+
+    [TestMethod]
+    public void CostToShip_GetCostOver5Pounds_Int()
+    {
+      Parcel parcel = new Parcel(8, 1, 2, 3);
+      int expectedCost = 9;
+      Assert.AreEqual(expectedCost, parcel.CostToShip());
+    }
   }
 }
