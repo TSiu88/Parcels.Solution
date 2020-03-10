@@ -4,18 +4,27 @@ namespace Parcels.Models
 {
   public class Parcel
   {
-    public string Name { get; set; }
-    public string City { get; set; }
+    public int Weight { get; set; }
+    public int Length { get; set; }
+    public int Width { get; set; }
+    public int Height { get; set; }
 
-    public Parcel(string name)
+    public Parcel(int weight, int length, int width, int height)
     {
-      Name = name;
-      City = "Seattle";
+      Weight = weight;
+      Length = length;
+      Width = width;
+      Height = height;
     }
 
-    public bool MethodName()
+    public int Volume()
     {
-      return true;
+      return 1;
+    }
+
+    public int CostToShip()
+    {
+      return 2;
     }
   }
 }
