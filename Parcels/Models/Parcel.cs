@@ -19,12 +19,19 @@ namespace Parcels.Models
 
     public int Volume()
     {
-      return 1;
+      return Length * Width * Height;
     }
 
     public int CostToShip()
     {
-      return 2;
+      if (Weight < 5)
+      {
+        return Volume();
+      }
+      else
+      {
+        return (Weight - 5) + Volume();
+      }
     }
   }
 }

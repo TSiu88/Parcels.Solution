@@ -29,6 +29,12 @@ A C#/.NET Core MVC website that helps users calculate shipping estimates. The us
 - Screen will display weight and dimensions of parcel on submit of form.
   - Sample input: User submits form.
   - Expected output: Weight: 10lbs, Height: 10in, Width: 10in, Length: 12in
+- User will receive cost of shipping estimate for parcel which is \$1 per unit of volume when below 5 pounds.
+  - Sample input: parcel=1 x 2 x 3, weight 4.
+  - Expected output: The estimated cost of shipping is \$6.
+- User will receive cost of shipping estimate for parcel which is $1 per unit of volume and $1 per pound over 5 pounds.
+  - Sample input: parcel=1 x 2 x 3, weight 8.
+  - Expected output: The estimated cost of shipping is \$9.
 - User will receive cost of shipping estimate for parcel on submit of form.
   - Sample input: User submits form.
   - Expected output: The estimated cost of shipping is \$24.
